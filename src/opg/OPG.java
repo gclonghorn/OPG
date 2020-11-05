@@ -38,13 +38,13 @@ public class OPG {
             System.exit(0);
         }
         char in=symbolStack.peek();
-        if(out=='#' && in=='#')return; //分析结束
         if(in=='N')  //若栈顶是非终结符,换成次栈顶
         {
             char tmp=symbolStack.pop();
             in=symbolStack.peek();
             symbolStack.push(tmp);
         }
+        if(out=='#' && in=='#')return; //分析结束
 
         int relation=priMatrix[map.get(in)][map.get(out)];
         if(relation==-1||relation==0)//移进
@@ -88,8 +88,8 @@ public class OPG {
     }
 
     public static void main(String[] args) throws IOException {
-        String filePath="F:\\软件系统分析\\untitled\\src\\opg\\input";
-        BufferedReader br = new BufferedReader(new FileReader(filePath));
+        //String filePath="F:\\软件系统分析\\untitled\\src\\opg\\input";
+        BufferedReader br = new BufferedReader(new FileReader(args[0]));
         set_priMatrix();
         String line = null;
         while ((line = br.readLine()) != null)
