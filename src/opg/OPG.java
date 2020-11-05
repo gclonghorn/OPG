@@ -26,9 +26,9 @@ public class OPG {
         priMatrix[0] = new int[]{1,-1,-1,-1,1,1};
         priMatrix[1] = new int[]{1, 1, -1, -1, 1, 1};
         priMatrix[2] = new int[]{1, 1, 10, 10, 1, 1};
-        priMatrix[3] = new int[]{-1, -1, -1, -1, 0, 1};
+        priMatrix[3] = new int[]{-1, -1, -1, -1, 0, 10};
         priMatrix[4] = new int[]{1, 1, 10, 10, 1, 1};
-        priMatrix[5] = new int[]{-1, -1, -1, -1, -1, 0};
+        priMatrix[5] = new int[]{-1, -1, -1, -1, 10, 0};
     }
     static void analyze(char out)
     {
