@@ -1,4 +1,4 @@
 FROM java:12
 WORKDIR /app/
-COPY ./* ./
+COPY ./* /app/
 RUN javac App.java
